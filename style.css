@@ -1,0 +1,75 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { font-family: system-ui, sans-serif; background: #f4f5fb; color: #1c1e2a; }
+
+.layout { display: flex; min-height: 100vh; }
+
+/* sidebar */
+.sidebar {
+  width: 230px;
+  background: #14152a;
+  color: #fff;
+  padding: 26px 18px;
+}
+.logo { font-size: 1.4rem; font-weight: bold; margin-bottom: 36px; }
+.logo span { color: #6c5ce7; }
+.sidebar nav { display: flex; flex-direction: column; gap: 6px; }
+.sidebar a {
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: #b3b5cc;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.sidebar a:hover, .sidebar a.active { background: #25264a; color: #fff; }
+
+/* main */
+.main { flex: 1; padding: 28px 36px; }
+.topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+.topbar h1 { font-size: 1.6rem; }
+.profile { background: #fff; padding: 10px 16px; border-radius: 30px; cursor: pointer; }
+
+/* top row: card + stats */
+.top-row { display: grid; grid-template-columns: 340px 1fr; gap: 22px; margin-bottom: 24px; }
+
+.credit-card {
+  background: linear-gradient(135deg, #6c5ce7, #8e7bff);
+  color: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  box-shadow: 0 12px 28px rgba(108, 92, 231, 0.35);
+}
+.cc-top { display: flex; justify-content: space-between; font-weight: bold; }
+.cc-number { font-size: 1.4rem; letter-spacing: 3px; }
+.cc-bottom { display: flex; justify-content: space-between; font-size: 0.9rem; }
+.cc-bottom small { opacity: 0.7; font-size: 0.7rem; }
+
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.stat {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.stat span { color: #8a8da3; font-size: 0.85rem; }
+.stat b { font-size: 1.6rem; margin-top: 4px; }
+.green { color: #00b894; }
+.red { color: #e74c3c; }
+
+/* bottom row */
+.bottom-row { display: grid; grid-template-columns: 1.4fr 1fr; gap: 22px; }
+.panel { background: #fff; border-radius: 16px; padding: 22px; }
+.panel h3 { margin-bottom: 16px; }
+
+.tx { list-style: none; }
+.tx li { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #f0f0f5; }
+.tx li:last-child { border: none; }
+.tx .amt.pos { color: #00b894; }
+.tx .amt.neg { color: #e74c3c; }
+.tx small { color: #9a9cb0; display: block; }

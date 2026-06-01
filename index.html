@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- a good looking banking dashboard, front-end only (fake data) -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bank dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- chart.js from a cdn for the spending graph -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <!-- left sidebar -->
+    <aside class="sidebar">
+      <div class="logo">◈ Nova<span>Bank</span></div>
+      <nav>
+        <a class="active">📊 Overview</a>
+        <a>💳 Cards</a>
+        <a>💸 Payments</a>
+        <a>📈 Invest</a>
+        <a>⚙️ Settings</a>
+      </nav>
+    </aside>
+
+    <!-- main area -->
+    <main class="main">
+      <header class="topbar">
+        <h1>Overview</h1>
+        <div class="profile">Turki ⌄</div>
+      </header>
+
+      <!-- the credit card + summary stats -->
+      <section class="top-row">
+        <div class="credit-card">
+          <div class="cc-top">
+            <span>NovaBank</span>
+            <span>VISA</span>
+          </div>
+          <div class="cc-number">4921 •••• •••• 8417</div>
+          <div class="cc-bottom">
+            <div><small>card holder</small><br />TURKI Q</div>
+            <div><small>expires</small><br />09/27</div>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><span>balance</span><b id="balance">$0</b></div>
+          <div class="stat"><span>income</span><b class="green">$6,240</b></div>
+          <div class="stat"><span>expenses</span><b class="red">$3,180</b></div>
+          <div class="stat"><span>savings</span><b>$12,900</b></div>
+        </div>
+      </section>
+
+      <!-- chart + transactions -->
+      <section class="bottom-row">
+        <div class="panel">
+          <h3>spending this week</h3>
+          <canvas id="chart"></canvas>
+        </div>
+        <div class="panel">
+          <h3>recent transactions</h3>
+          <ul class="tx" id="tx"></ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
